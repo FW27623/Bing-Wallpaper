@@ -28,6 +28,7 @@ jobs:
       env:
          GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
          GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
+         MY_GIT_TOKEN: ${{ secrets.MY_GIT_TOKEN }}
       run: |
          git config --global user.name $GIT_USERNAME
          git config --global user.email $GIT_EMAIL
