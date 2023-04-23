@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
-      - name: Wait for 5 minutes
+      - name: Wait for 1 minutes
         run: sleep 60
       - uses: actions/checkout@v2
         with:
