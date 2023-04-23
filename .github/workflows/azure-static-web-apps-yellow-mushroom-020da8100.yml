@@ -14,11 +14,12 @@ on:
 
 jobs:
   build_and_deploy_job:
-    needs: Java CI with Maven
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
+      - name: Wait for 5 minutes
+        run: sleep 60
       - uses: actions/checkout@v2
         with:
           submodules: true
