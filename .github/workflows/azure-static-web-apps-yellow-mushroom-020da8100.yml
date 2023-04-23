@@ -9,7 +9,7 @@ on:
     branches:
       - main
     paths-ignore:
-      - '.github/workflows/maven.yml'
+      - '.github/workflows/.maven.yml'
 
 jobs:
   build_and_deploy_job:

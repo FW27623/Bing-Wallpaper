@@ -36,9 +36,11 @@ jobs:
          git config --global user.name $GIT_USERNAME
          git config --global user.email $GIT_EMAIL
          git pull
-         git add -f README.md
-         git add -f bing-wallpaper.md
-         git add -f picture/*
-         git add -f docs/*
-         git commit -m "update readme.md"
-         git push
+         if ! git diff --quiet --exit-code; then
+           git add -f README.md
+           git add -f bing-wallpaper.md
+           git add -f picture/*
+           git add -f docs/*
+           git commit -m "update readme.md"
+           git push
+         fi
