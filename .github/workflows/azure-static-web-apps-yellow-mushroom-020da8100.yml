@@ -21,6 +21,12 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: true
+      - name: Wait for first workflow
+        uses: fountainhead/action-wait-on-check@v1.0.0
+        with:
+          token: ${{ secrets.MY_GIT_TOKEN }}
+          checkName: Java CI with Maven
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
