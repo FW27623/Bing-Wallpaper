@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  Wait for one minute:
+  Wait_for_one_minute:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Wait for Build and Deploy Job
