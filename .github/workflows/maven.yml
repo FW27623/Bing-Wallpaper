@@ -42,6 +42,12 @@ jobs:
     - name: Run Java Application
       run: java -jar target/bing-wallpaper-jar-with-dependencies.jar
     
+    - name: Save Maven cache
+      uses: actions/cache@v3
+      with:
+        path: ~/.m2/repository
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+    
     - name: Commit files
       env:
          GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
