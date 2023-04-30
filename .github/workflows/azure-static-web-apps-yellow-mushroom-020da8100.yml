@@ -64,9 +64,9 @@ jobs:
            git add -f docs/*
            git commit -m "update readme.md"
            git push
-           NEW_COMMIT_SHA=$(git rev-parse HEAD)
-           echo "NEW_COMMIT_SHA=$NEW_COMMIT_SHA" >> $GITHUB_ENV
          fi
+         NEW_COMMIT_SHA=$(git rev-parse HEAD)
+         echo "NEW_COMMIT_SHA=$NEW_COMMIT_SHA" >> $GITHUB_ENV
   
   build_and_deploy_job:
     runs-on: ubuntu-latest  
