@@ -58,13 +58,24 @@ jobs:
          git config --global user.email $GIT_EMAIL
          git pull
          if ! git diff --quiet --exit-code; then
-           git add -f README.md
-           git add -f bing-wallpaper.md
-           git add -f picture/*
-           git add -f docs/*
+           git add README.md
+           git add bing-wallpaper.md
+           git add picture/*
+           git add docs/*
            git commit -m "update readme.md"
            git push
          fi
+         
+    - name: Get hash value
+      env:
+         GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
+         GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
+         MY_GIT_TOKEN: ${{ secrets.MY_GIT_TOKEN }}
+      run: |
+         git config --global user.name $GIT_USERNAME
+         git config --global user.email $GIT_EMAIL
+         git fetch
+         git pull
          NEW_COMMIT_SHA=$(git rev-parse HEAD)
          echo "NEW_COMMIT_SHA=$NEW_COMMIT_SHA" >> $GITHUB_ENV
   
