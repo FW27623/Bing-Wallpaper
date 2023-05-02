@@ -68,21 +68,6 @@ jobs:
            NEW_COMMIT_SHA=$(echo "$PUSH_OUTPUT" | grep -oP '\S+ -> \S+' | awk '{print $1}')
            echo "NEW_COMMIT_SHA=$NEW_COMMIT_SHA" >> $GITHUB_ENV
          fi
-         
-    - name: Get hash value
-      env:
-         GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
-         GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
-         MY_GIT_TOKEN: ${{ secrets.MY_GIT_TOKEN }}
-      run: |
-         git config --global user.name $GIT_USERNAME
-         git config --global user.email $GIT_EMAIL
-         git fetch
-         git pull
-         PUSH_OUTPUT=$(git push 2>&1)
-         echo "$PUSH_OUTPUT"
-         NEW_COMMIT_SHA=$(echo "$PUSH_OUTPUT" | grep -oP '\S+ -> \S+' | awk '{print $1}')
-         echo "NEW_COMMIT_SHA=$NEW_COMMIT_SHA" >> $GITHUB_ENV
   
   build_and_deploy_job:
     runs-on: ubuntu-latest  
@@ -91,7 +76,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: ${{ env.NEW_COMMIT_SHA }}
+          ref: main
           submodules: true
       - name: Build And Deploy
         id: builddeploy
