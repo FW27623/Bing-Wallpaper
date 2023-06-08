@@ -1,4 +1,6 @@
 ## Bing Wallpaper
+2023-06-09 | [Humpback whale (© Philip Thurston/Getty Images)](https://cn.bing.com/th?id=OHR.PlayfulHumpback_EN-US8290961519_UHD.jpg) 
+
 2023-06-08 | [Pueblo Bonito, Chaco Culture National Historical Park, New Mexico (© Ian Shive/Tandem Stills + Motion)](https://cn.bing.com/th?id=OHR.ChacoCulture_EN-US8179442556_UHD.jpg) 
 
 2023-06-07 | [The chalk cliffs of Étretat, Normandy, France (© MarcelloLand/Getty Images)](https://cn.bing.com/th?id=OHR.CliffsEtretat_EN-US8125687089_UHD.jpg) 
