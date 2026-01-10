@@ -1,4 +1,6 @@
 ## Bing Wallpaper
+2026-01-11 | [The Matterhorn reflected in Lake Stellisee at sunrise, Zermatt, Switzerland (© Andy Trowbridge/naturepl.com)](https://cn.bing.com/th?id=OHR.MatterhornSunrise_EN-US9978097106_UHD.jpg) 
+
 2026-01-09 | [Starling murmuration over the ruins of Brighton's West Pier, England (© Philip Reeve/Photodisc/Getty Images)](https://cn.bing.com/th?id=OHR.StarlingBrighton2025_EN-US6998438769_UHD.jpg) 
 
 2026-01-08 | [Turret Arch framed by North Window in Arches National Park, Utah (© Jim Patterson/TANDEM Stills + Motion)](https://cn.bing.com/th?id=OHR.OldRockArch_EN-US2422589534_UHD.jpg) 
